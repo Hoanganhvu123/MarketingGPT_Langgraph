@@ -41,6 +41,8 @@ MarketingGPT is an automated email marketing system designed to send personalize
                                  +-------------+    |
                                  | Email Sender| ---+
                                  +-------------+
+
+## 🔄 Detail
 📥 User Request: The user inputs a request for an email marketing campaign (e.g., send a promotion email to single customers).
 
 🔍 Searcher: This agent searches for and retrieves customer and product information from the database.

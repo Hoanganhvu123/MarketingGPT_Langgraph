@@ -1,0 +1,21 @@
+﻿product_id,product_name,category,price,discount,promotion_start_date,promotion_end_date,promotion_details
+1,iPhone 12,Điện thoại,20000000,10,2024-01-01,2024-01-31,Giảm 10% cho sản phẩm iPhone 12
+2,Laptop Dell,Máy tính,25000000,15,2024-02-01,2024-02-28,Giảm 15% cho Laptop Dell
+3,Tai nghe Sony,Âm nhạc,3000000,5,2024-03-01,2024-03-31,Giảm 5% cho Tai nghe Sony
+4,Giày chạy bộ Nike,Thể thao,1500000,20,2024-04-01,2024-04-30,Giảm 20% cho Giày chạy bộ Nike
+5,Sách Harry Potter,Sách,200000,0,2024-05-01,2024-05-31,Không có khuyến mãi
+6,Quần jean,Quần áo,500000,10,2024-06-01,2024-06-30,Giảm 10% cho Quần jean
+7,Máy xay sinh tố Philips,Đồ gia dụng,1500000,25,2024-07-01,2024-07-31,Giảm 25% cho Máy xay sinh tố Philips
+8,Giày thể thao Adidas,Giày dép,2000000,10,2024-08-01,2024-08-31,Giảm 10% cho Giày thể thao Adidas
+9,Bỉm Huggies,Bỉm sữa,500000,5,2024-09-01,2024-09-30,Giảm 5% cho Bỉm Huggies
+10,Đồ chơi Lego,Đồ chơi trẻ em,800000,15,2024-10-01,2024-10-31,Giảm 15% cho Đồ chơi Lego
+11,Son môi MAC,Mỹ phẩm,400000,20,2024-11-01,2024-11-30,Giảm 20% cho Son môi MAC
+12,Máy giặt Samsung,Đồ gia dụng,10000000,10,2024-12-01,2024-12-31,Giảm 10% cho Máy giặt Samsung
+13,Đèn đọc sách,Đồ gia dụng,300000,5,2024-01-15,2024-01-31,Giảm 5% cho Đèn đọc sách
+14,Loa Bluetooth,Âm nhạc,1500000,15,2024-02-15,2024-02-29,Giảm 15% cho Loa Bluetooth
+15,Bóng rổ,Thể thao,200000,10,2024-03-15,2024-03-31,Giảm 10% cho Bóng rổ
+16,Sách kinh doanh,Sách,250000,0,2024-04-15,2024-04-30,Không có khuyến mãi
+17,Áo sơ mi,Quần áo,300000,10,2024-05-15,2024-05-31,Giảm 10% cho Áo sơ mi
+18,Nồi cơm điện,Đồ gia dụng,1000000,20,2024-06-15,2024-06-30,Giảm 20% cho Nồi cơm điện
+19,Giày cao gót,Giày dép,1500000,15,2024-07-15,2024-07-31,Giảm 15% cho Giày cao gót
+20,Sữa Similac,Bỉm sữa,300000,5,2024-08-15,2024-08-31,Giảm 5% cho Sữa Similac
