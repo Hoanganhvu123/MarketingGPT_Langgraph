@@ -53,10 +53,10 @@ def create_graph():
     return graph.compile()
 
 if __name__ == "__main__":
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.1)
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
     graph = create_graph()
 
     # Một ví dụ về state để test
-    initial_state = {"query": "viết email marketing cho tôi khách hàng a"}
+    initial_state = {"query": "viết email marketing cho tôi khách hàng Nguyễn Văn A về nội dung công ty chuẩn bị khai trương"}
     result = graph.invoke(initial_state)
-    print(result["written_output"]["content"])
+    print(result)

@@ -6,7 +6,8 @@ from marketinggpt.tools.product_search import product_search_tool
 from marketinggpt.tools.customer_search import customer_search_tool
 from dotenv import load_dotenv
 from langchain_google_genai import ChatGoogleGenerativeAI
-
+from langchain.prompts import PromptTemplate, ChatPromptTemplate
+from langchain_groq import ChatGroq
 
 dotenv_path = r"D:\gpt-marketer\marketinggpt\.env"
 load_dotenv(dotenv_path)
@@ -20,6 +21,19 @@ os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_SMITH_API_KEY")
 os.environ['GOOGLE_API_KEY'] = os.getenv('GOOGLE_API_KEY')
 
 
+
+
+SEARCHER_PROMPT_TEMPLATE = ChatPromptTemplate.from_template(
+    """
+    SYSTEM: You are a helpful assistant
+    
+    HUMAN: {input}
+    
+    PLACEHOLDER: {agent_scratchpad}
+    """
+)
+
+
 class Searcher:
     def __init__(self, llm, verbose=True, **kwargs):
         self.llm = llm
@@ -30,12 +44,12 @@ class Searcher:
         return ["response"]
 
     def _call(self, query: str) -> str:
-        tools = [product_search_tool, customer_search_tool]
+        tools = [customer_search_tool]
         inputs = {
-            "input": query,
-        }
-        prompt = hub.pull("hwchase17/openai-tools-agent")
-        agent = create_tool_calling_agent(self.llm, tools, prompt)
+                "input": query,
+            }
+        prompt = SEARCHER_PROMPT_TEMPLATE
+        agent = create_tool_calling_agent(self.llm, tools, prompt = prompt)
 
         agent_executor = AgentExecutor(
             agent=agent,
@@ -47,15 +61,12 @@ class Searcher:
         agent_output = ai_message['output']
         return agent_output
 
-
-
 def search_agent_node(state: Dict[str, Any]) -> Dict[str, str]:
     "Define search agent node "
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=1)
+    llm = ChatGroq(model="llama3-70b-8192", temperature=0.3)
     search_agent = Searcher(llm)
-    state[" search_result"] = search_agent._call(state["query"])
+    state["search_result"] = search_agent._call(state["query"])
     return state
-
 
 if __name__ == "__main__":
     # Một ví dụ về state để test

@@ -30,17 +30,6 @@ MarketingGPT is an automated email marketing system designed to send personalize
 - **📅 promotion_end_date**: Promotion End Date
 - **📝 promotion_details**: Promotion Details
 
-## 🔄 System Workflow
-
-```plaintext
-+---------------+        +-----------+        +-------------+
-| User Request  | -----> | Searcher  | -----> | Writer      |
-+---------------+        +-----------+        +-------------+
-                                        |           |
-                                        |           |
-                                 +-------------+    |
-                                 | Email Sender| ---+
-                                 +-------------+
 
 ## 🔄 Detail
 📥 User Request: The user inputs a request for an email marketing campaign (e.g., send a promotion email to single customers).
@@ -73,5 +62,5 @@ MarketingGPT is an automated email marketing system designed to send personalize
 - Send marketing emails to the selected customer list.
 - Track email sending status and generate reports on campaign results.
 
-"# MarketingGPT_Langgraph" 
-"# MarketingGPT_Langgraph" 
+# MarketingGPT_Langgraph
+# MarketingGPT_Langgraph
